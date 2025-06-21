@@ -1,13 +1,15 @@
-import { useState } from 'react'
 import IconSideNav from './components/IconSideNav'
 import './App.css'
+import { AppRouter } from './router/approuter'
 
 function App() {
-
   return (
-    <>
+    <div className="flex flex-row h-screen">
       <IconSideNav />
-    </>
+      <main className="flex-1 flex flex-col bg-slate-500">
+        <AppRouter />
+      </main>
+    </div>
   )
 }
 
