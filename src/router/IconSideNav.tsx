@@ -30,9 +30,9 @@ const SideNav = () => {
       <NavItem to="/projects" label="Projects" selected={selected === 2} id={2} setSelected={setSelected}>
         <FaMedapps />
       </NavItem>
-      <NavItem to="https://github.com/leobrowaldh" label="Github" selected={selected === 3} id={3} setSelected={setSelected}>
+      <NavExternalLink to="https://github.com/leobrowaldh" label="Github">
         <FaGithub />
-      </NavItem>
+      </NavExternalLink>
     </nav>
   );
 };
@@ -77,5 +77,30 @@ const NavItem = ({ children, selected, id, setSelected, label, to }: NavItemProp
     </MotionNavLink>
   );
 };
+
+const NavExternalLink = ({
+  children,
+  label,
+  to,
+}: {
+  children: ReactNode;
+  label: string;
+  to: string;
+}) => (
+  <motion.a
+    href={to}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative block p-3 text-xl bg-slate-800 hover:bg-slate-700 rounded-md transition-colors"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <span className="block relative z-10">{children}</span>
+    <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-slate-800 text-sm px-2 py-1 rounded-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-20">
+      {label}
+    </span>
+  </motion.a>
+);
+
 
 export default IconSideNav;
