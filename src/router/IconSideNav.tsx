@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { NavLink } from "react-router";
 
-import { SiCss3, SiReaddotcv } from "react-icons/si";
+import { SiReaddotcv } from "react-icons/si";
 import { IoHome } from "react-icons/io5";
 import { FaMedapps } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
@@ -20,24 +21,23 @@ const SideNav = () => {
 
   return (
     <nav className="h-screen w-fit bg-slate-950 p-4 flex flex-col items-center gap-2">
-      <NavItem label="Home" selected={selected === 0} id={0} setSelected={setSelected}>
+      <NavItem to="/" label="Home" selected={selected === 0} id={0} setSelected={setSelected}>
         <IoHome />
       </NavItem>
-      <NavItem label="CV" selected={selected === 1} id={1} setSelected={setSelected}>
+      <NavItem to="/cv" label="CV" selected={selected === 1} id={1} setSelected={setSelected}>
         <SiReaddotcv />
       </NavItem>
-      <NavItem label="Projects" selected={selected === 2} id={2} setSelected={setSelected}>
+      <NavItem to="/projects" label="Projects" selected={selected === 2} id={2} setSelected={setSelected}>
         <FaMedapps />
       </NavItem>
-      <NavItem label="Github" selected={selected === 3} id={3} setSelected={setSelected}>
+      <NavItem to="https://github.com/leobrowaldh" label="Github" selected={selected === 3} id={3} setSelected={setSelected}>
         <FaGithub />
-      </NavItem>
-      <NavItem label="CSS3" selected={selected === 4} id={4} setSelected={setSelected}>
-        <SiCss3 />
       </NavItem>
     </nav>
   );
 };
+
+const MotionNavLink = motion(NavLink);
 
 type NavItemProps = {
   children: ReactNode;
@@ -45,21 +45,22 @@ type NavItemProps = {
   id: number;
   setSelected: (id: number) => void;
   label: string;
+  to: string;
 };
 
-const NavItem = ({ children, selected, id, setSelected, label }: NavItemProps) => {
+const NavItem = ({ children, selected, id, setSelected, label, to }: NavItemProps) => {
   return (
-    <motion.button
-      className="group relative p-3 text-xl bg-slate-800 hover:bg-slate-700 rounded-md transition-colors"
+    <MotionNavLink
+      to={to}
+      end
       onClick={() => setSelected(id)}
+      className="group relative block p-3 text-xl bg-slate-800 hover:bg-slate-700 rounded-md transition-colors"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       <span className="block relative z-10">{children}</span>
 
-      <span
-        className="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-slate-800 text-sm px-2 py-1 rounded-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-20"
-      >
+      <span className="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-slate-800 text-sm px-2 py-1 rounded-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-20">
         {label}
       </span>
 
@@ -70,12 +71,11 @@ const NavItem = ({ children, selected, id, setSelected, label }: NavItemProps) =
             initial={{ scale: 0 }}
             animate={{ scale: 1.1 }}
             exit={{ scale: 0 }}
-          ></motion.span>
+          />
         )}
       </AnimatePresence>
-    </motion.button>
+    </MotionNavLink>
   );
 };
-
 
 export default IconSideNav;

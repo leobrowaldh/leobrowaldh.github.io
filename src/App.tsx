@@ -1,4 +1,4 @@
-import IconSideNav from './components/IconSideNav'
+import IconSideNav from './router/IconSideNav'
 import './App.css'
 import { AppRouter } from './router/approuter'
 
