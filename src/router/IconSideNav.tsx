@@ -4,8 +4,6 @@ import type { ReactNode } from "react";
 import { NavLink } from "react-router";
 
 import { SiReaddotcv } from "react-icons/si";
-import { IoHome } from "react-icons/io5";
-import { FaMedapps } from "react-icons/fa6";
 import { FaGithub, FaLinkedin  } from "react-icons/fa";
 
 const IconSideNav = () => {
