@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="flex flex-row h-screen">
       <IconSideNav />
-      <main className="flex-1 flex flex-col bg-blue-100 p-4">
+      <main className="flex-1 flex flex-col bg-indigo-300 p-4">
         <AppRouter />
       </main>
     </div>
