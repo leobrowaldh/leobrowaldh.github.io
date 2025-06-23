@@ -21,12 +21,6 @@ const SideNav = () => {
 
   return (
     <nav className="h-screen w-fit bg-slate-950 p-4 flex flex-col items-center gap-2">
-      <NavItem to="/" label="Home" selected={selected === 0} id={0} setSelected={setSelected}>
-        <IoHome />
-      </NavItem>
-      <NavItem to="/projects" label="Projects" selected={selected === 2} id={2} setSelected={setSelected}>
-        <FaMedapps />
-      </NavItem>
       <NavItem to="/cv" label="CV" selected={selected === 1} id={1} setSelected={setSelected}>
         <SiReaddotcv />
       </NavItem>

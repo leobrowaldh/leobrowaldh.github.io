@@ -8,7 +8,7 @@ import Cv from '../pages/cv';
 export function AppRouter() {
     return (
         <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/" element={<Cv/>} />
             <Route path="/projects" element={<Projects/>} />
             <Route path="/cv" element={<Cv/>} />
         </Routes>
