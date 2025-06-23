@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 import { SiReaddotcv } from "react-icons/si";
 import { IoHome } from "react-icons/io5";
 import { FaMedapps } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin  } from "react-icons/fa";
 
 const IconSideNav = () => {
   return (
@@ -24,20 +24,23 @@ const SideNav = () => {
       <NavItem to="/" label="Home" selected={selected === 0} id={0} setSelected={setSelected}>
         <IoHome />
       </NavItem>
-      <NavItem to="/cv" label="CV" selected={selected === 1} id={1} setSelected={setSelected}>
-        <SiReaddotcv />
-      </NavItem>
       <NavItem to="/projects" label="Projects" selected={selected === 2} id={2} setSelected={setSelected}>
         <FaMedapps />
       </NavItem>
+      <NavItem to="/cv" label="CV" selected={selected === 1} id={1} setSelected={setSelected}>
+        <SiReaddotcv />
+      </NavItem>
       <NavExternalLink to="https://github.com/leobrowaldh" label="Github">
         <FaGithub />
+      </NavExternalLink>
+      <NavExternalLink to="https://www.linkedin.com/in/leo-browaldh-75650a229/" label="LinkedIn">
+        <FaLinkedin />
       </NavExternalLink>
     </nav>
   );
 };
 
-const MotionNavLink = motion(NavLink);
+const MotionNavLink = motion.create(NavLink);
 
 type NavItemProps = {
   children: ReactNode;
