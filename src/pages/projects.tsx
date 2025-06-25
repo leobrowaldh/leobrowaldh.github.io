@@ -1,5 +1,3 @@
-import SharedLayoutAnimation from "../components/sharedLayoutAnimations";
-
 
 export default function Projects() {
     return (
