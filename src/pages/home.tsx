@@ -11,7 +11,7 @@ export default function Home() {
         <div className="max-w-md animate-fade-in">
           <h1 className="text-4xl font-mono mb-4">Enter the Code</h1>
           <p className="text-lg font-mono">
-            The Matrix has you. Discover the secrets within.
+            Welcome to my page, feel free to browse around.
           </p>
         </div>
       </div>
