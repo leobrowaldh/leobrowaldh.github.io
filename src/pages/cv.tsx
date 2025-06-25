@@ -13,7 +13,7 @@ const Cv = () => {
     setLanguage(next);
   };
 
-  const getPdfUrl = () => `/cv/Leo_Browaldh_CV(${language}).pdf`;
+  const getPdfUrl = () => `/cv/Leo_Browaldh_CV2(${language}).pdf`;
 
   return (
     <div className="p-6 space-y-4">
