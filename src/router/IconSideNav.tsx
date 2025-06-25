@@ -16,8 +16,9 @@ const IconSideNav = () => {
     <>
       {/* Hamburger toggle (mobile only) */}
       <button
-        className="md:hidden fixed top-4 left-4 z-50 text-white bg-slate-800 p-2 rounded"
+        className="md:hidden absolute top-4 left-0 z-50 text-white bg-slate-800 p-2 rounded"
         onClick={() => setIsOpen(!isOpen)}
+        style={{ marginLeft: '0.5rem' }} // optional: matches sidebar padding
       >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
@@ -25,7 +26,7 @@ const IconSideNav = () => {
       {/* Sidebar (mobile: toggle, desktop: always visible) */}
       <div
         className={`
-          bg-slate-900 text-slate-100 p-4
+          bg-cyan-900 text-slate-100 p-4 pt-18
           ${isOpen ? "flex" : "hidden"} 
           md:flex
           fixed md:static top-0 left-0 h-full flex-col z-40
@@ -78,12 +79,15 @@ type NavItemProps = {
   close: () => void;
 };
 
-const NavItem = ({ children, selected, id, setSelected, label, to }: NavItemProps) => {
+const NavItem = ({ children, selected, id, setSelected, label, to, close }: NavItemProps) => {
   return (
     <MotionNavLink
       to={to}
       end
-      onClick={() => setSelected(id)}
+      onClick={() => {
+        setSelected(id);
+        if (window.innerWidth < 768) close();
+      }}
       className="group relative block p-3 text-xl bg-slate-800 hover:bg-slate-700 rounded-md transition-colors"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

@@ -1,19 +1,20 @@
-import { SiReaddotcv } from "react-icons/si";
-import { FaMedapps } from "react-icons/fa6";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import GlassIcons from '../components/glassIcons'
 
 export default function Home() {
-    const items = [
-        { icon: <FaMedapps />, color: 'blue', label: 'Projects' },
-        { icon: <SiReaddotcv />, color: 'blue', label: 'VC' },
-        { icon: <FaGithub />, color: 'blue', label: 'Github' },
-        { icon: <FaLinkedin />, color: 'blue', label: 'LinkedIn' },
-        ];
-    return (
-        <div className="justify-center items-center flex flex-col h-screen">
-            <p className='pb-10'>Hi!</p>
-            <GlassIcons items={items} className="custom-class"/>
+  return (
+    <div className="flex items-center justify-center h-screen bg-black text-lime-500 px-4">
+      <div className="flex flex-row items-center gap-8">
+        <img
+          src="/giffs/walkingCode.gif"
+          alt="Walking Code"
+          className="w-[188px] h-[294px] object-contain"
+        />
+        <div className="max-w-md animate-fade-in">
+          <h1 className="text-4xl font-mono mb-4">Enter the Code</h1>
+          <p className="text-lg font-mono">
+            The Matrix has you. Discover the secrets within.
+          </p>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
