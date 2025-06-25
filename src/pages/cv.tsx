@@ -17,7 +17,6 @@ const Cv = () => {
 
   return (
     <div className="p-6 space-y-4">
-      <h1 className="text-2xl font-bold text-center">Curriculum Vitae</h1>
 
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[850px]">
