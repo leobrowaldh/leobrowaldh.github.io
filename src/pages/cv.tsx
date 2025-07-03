@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { NavLink } from "react-router";
 const languageOptions = ["EN", "SE", "ES"] as const;
 type Lang = typeof languageOptions[number];
 
-const Cv = () => {
+const MotionNavLink = motion.create(NavLink);
+
+const Cv = ({setSelectedNav}: {setSelectedNav: (id: number) => void}) => 
+{
   const [language, setLanguage] = useState<Lang>("EN");
 
   const cycleLanguage = () => {
@@ -20,14 +23,26 @@ const Cv = () => {
 
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[850px]">
-          <motion.button
-            onClick={cycleLanguage}
-            className="mb-2 px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-white transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Language: {language}
-          </motion.button>
+          <div className="flex flex-row items-center justify-end gap-4 m-4">
+            <MotionNavLink
+              to="/"
+              end
+              onClick={() => setSelectedNav(0)}
+              className="mb-2 px-4 py-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Me
+            </MotionNavLink>
+            <motion.button
+              onClick={cycleLanguage}
+              className="mb-2 px-4 py-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Language: {language}
+            </motion.button>
+          </div>
 
           <div className="w-full h-[80vh]">
             <iframe

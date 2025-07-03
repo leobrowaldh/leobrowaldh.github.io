@@ -8,8 +8,14 @@ import { IoHome } from "react-icons/io5";
 import { FaMedapps } from "react-icons/fa6";
 import { FaGithub, FaLinkedin, FaBars, FaTimes  } from "react-icons/fa";
 
+type IconSideNavProps = 
+{  
+  selected: number;
+  setSelected: (id: number) => void; 
+};
 
-const IconSideNav = () => {
+const IconSideNav = ({selected, setSelected}: IconSideNavProps) => 
+{
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,18 +38,26 @@ const IconSideNav = () => {
           fixed md:static top-0 left-0 h-full flex-col z-40
         `}
       >
-        <SideNav close={() => setIsOpen(false)} />
+        <SideNav 
+          close={() => setIsOpen(false)}
+          selected={selected}
+          setSelected={setSelected}
+        />
       </div>
     </>
   );
 };
 
-type SideNavProps = {
+type SideNavProps = 
+{
   close: () => void;
+  selected: number;
+  setSelected: (id: number) => void;
 };
 
-const SideNav = ({ close }: SideNavProps) => {
-  const [selected, setSelected] = useState(0);
+
+const SideNav = ({ close, selected, setSelected }: SideNavProps) => 
+{
 
   return (
     <nav className="flex flex-col items-center gap-2">
@@ -69,7 +83,8 @@ const SideNav = ({ close }: SideNavProps) => {
 
 const MotionNavLink = motion.create(NavLink);
 
-type NavItemProps = {
+type NavItemProps = 
+{
   children: ReactNode;
   selected: boolean;
   id: number;
@@ -79,7 +94,8 @@ type NavItemProps = {
   close: () => void;
 };
 
-const NavItem = ({ children, selected, id, setSelected, label, to, close }: NavItemProps) => {
+const NavItem = ({ children, selected, id, setSelected, label, to, close }: NavItemProps) => 
+{
   return (
     <MotionNavLink
       to={to}

@@ -30,6 +30,7 @@ export default function Home() {
               d="M21 8.25V19.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 19.5V8.25m18 0A2.25 2.25 0 0018.75 6H5.25A2.25 2.25 0 003 8.25m18 0v.243a2.25 2.25 0 01-.659 1.591l-7.091 7.091a2.25 2.25 0 01-3.182 0l-7.091-7.09A2.25 2.25 0 013 8.493V8.25"
             />
           </svg>
+          {/* call azure function endpoint for sendgrid email sending, use form here... */}
           <span className="font-mono text-lime-400 text-lg">Contact Form coming soon, in the meantime reach me by LinkedIn...</span>
         </div>
       </div>
