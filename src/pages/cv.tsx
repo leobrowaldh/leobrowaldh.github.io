@@ -25,9 +25,9 @@ const Cv = ({setSelectedNav}: {setSelectedNav: (id: number) => void}) =>
         <div className="w-full max-w-[850px]">
           <div className="flex flex-row items-center justify-end gap-4 m-4">
             <MotionNavLink
-              to="/"
+              to="/contact"
               end
-              onClick={() => setSelectedNav(0)}
+              onClick={() => setSelectedNav(3)}
               className="mb-2 px-4 py-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
