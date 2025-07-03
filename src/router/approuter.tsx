@@ -5,12 +5,12 @@ import Home from "../pages/home";
 
 
 
-export function AppRouter() {
+export function AppRouter({ setSelectedNav }: { setSelectedNav: (id: number) => void }) {
     return (
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/projects" element={<Projects/>} />
-            <Route path="/cv" element={<Cv/>} />
+            <Route path="/cv" element={<Cv setSelectedNav={setSelectedNav}/>} />
         </Routes>
     )
 }
