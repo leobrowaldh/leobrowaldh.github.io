@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* to fix some apparent tailwind modern browser compatibility issue: */
+html,
+:host {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

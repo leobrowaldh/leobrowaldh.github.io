@@ -10,7 +10,7 @@ function App() {
 
       <IconSideNav selected={selectedNav} setSelected={setSelectedNav} />
 
-      <main className="flex-1 flex flex-col p-4 overflow-auto">
+      <main className="flex-1 flex flex-col p-4 overflow-auto mt-15 md:mt-0">
         <AppRouter setSelectedNav={setSelectedNav} />
       </main>
 

@@ -57,9 +57,8 @@ export default function SharedLayoutAnimation() {
  */
 
 const container: React.CSSProperties = {
-    width: 480,
-    height: "60vh",
-    maxHeight: 360,
+    width: "100%",
+    height: "100%",
     borderRadius: 10,
     background: "white",
     overflow: "hidden",

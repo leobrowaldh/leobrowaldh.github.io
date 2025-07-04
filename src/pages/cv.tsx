@@ -16,24 +16,27 @@ const Cv = ({setSelectedNav}: {setSelectedNav: (id: number) => void}) =>
     setLanguage(next);
   };
 
-  const getPdfUrl = () => `/cv/Leo_Browaldh_CV2(${language}).pdf`;
+  const getPdfUrl = () => `/images/Leo_Browaldh_CV_${language}.jpg`;
 
   return (
-    <div className="p-6 space-y-4">
+    <div>
 
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[850px]">
           <div className="flex flex-row items-center justify-end gap-4 m-4">
+
             <MotionNavLink
               to="/contact"
               end
               onClick={() => setSelectedNav(3)}
               className="mb-2 px-4 py-2"
+              title="Contact me for full PDF"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Contact Me
             </MotionNavLink>
+
             <motion.button
               onClick={cycleLanguage}
               className="mb-2 px-4 py-2"
@@ -42,13 +45,14 @@ const Cv = ({setSelectedNav}: {setSelectedNav: (id: number) => void}) =>
             >
               Language: {language}
             </motion.button>
+
           </div>
 
-          <div className="w-full h-[80vh]">
-            <iframe
+          <div className="w-full h-[80vh] max-h-[90vh] sm:h-[90vh]">
+            <img
               src={getPdfUrl()}
-              className="w-full h-full border rounded"
-              title={`CV ${language}`}
+              alt={`CV ${language}`}
+              className="w-full max-w-[850px] h-auto rounded shadow"
             />
           </div>
         </div>
