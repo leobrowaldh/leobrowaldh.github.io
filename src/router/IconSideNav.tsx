@@ -36,7 +36,8 @@ const IconSideNav = ({selected, setSelected}: IconSideNavProps) =>
           bg-cyan-900 text-slate-100 p-4 pt-18
           ${isOpen ? "flex" : "hidden"} 
           md:flex
-          fixed md:static top-0 left-0 h-full flex-col z-40
+          fixed md:static top-0 left-0 flex-col z-40
+          h-screen md:h-auto md:min-h-screen
         `}
       >
         <SideNav 

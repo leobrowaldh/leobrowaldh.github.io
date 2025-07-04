@@ -1,22 +1,22 @@
 export default function Home() {
   return (
-    <div className="flex items-center justify-center h-screen bg-black text-lime-500 px-4">
+    <div className="flex items-center justify-center min-h-screen bg-black text-lime-500 px-4 py-8">
       <div className="flex flex-col items-center gap-8">
-        <div className="flex flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+          <div className="max-w-md animate-fade-in">
+            <h1 className="text-4xl font-mono mb-4 break-words">Welcome</h1>
+            <p className="text-lg font-mono break-words">
+              Feel free to browse around.
+            </p>
+          </div>
           <img
             src="/giffs/walkingCode.gif"
             alt="Walking Code"
             className="w-[188px] h-[294px] object-contain"
           />
-          <div className="max-w-md animate-fade-in">
-            <h1 className="text-4xl font-mono mb-4">Welcome</h1>
-            <p className="text-lg font-mono">
-              Feel free to browse around.
-            </p>
-          </div>
         </div>
-        
       </div>
     </div>
   );
 }
+
