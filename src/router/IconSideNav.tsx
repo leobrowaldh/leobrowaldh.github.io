@@ -8,6 +8,7 @@ import { IoHome } from "react-icons/io5";
 import { FaMedapps } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { FaGithub, FaLinkedin, FaBars, FaTimes  } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
 
 type IconSideNavProps = 
 {  
@@ -66,10 +67,13 @@ const SideNav = ({ close, selected, setSelected }: SideNavProps) =>
       <NavItem to="/" label="Home" selected={selected === 0} id={0} setSelected={setSelected} close={close}>
         <IoHome />
       </NavItem>
-      <NavItem to="/projects" label="Projects" selected={selected === 1} id={1} setSelected={setSelected} close={close}>
+      <NavItem to="/cv" label="CV" selected={selected === 1} id={1} setSelected={setSelected} close={close}>
+        <TbFileCv />
+      </NavItem>
+      <NavItem to="/projects" label="Projects" selected={selected === 2} id={2} setSelected={setSelected} close={close}>
         <FaMedapps />
       </NavItem>
-      <NavItem to="/cv" label="CV" selected={selected === 2} id={2} setSelected={setSelected} close={close}>
+      <NavItem to="/articles" label="Articles" selected={selected === 3} id={3} setSelected={setSelected} close={close}>
         <SiReaddotcv />
       </NavItem>
       <NavExternalLink to="https://github.com/leobrowaldh" label="Github">
@@ -78,7 +82,7 @@ const SideNav = ({ close, selected, setSelected }: SideNavProps) =>
       <NavExternalLink to="https://www.linkedin.com/in/leo-browaldh-75650a229/" label="LinkedIn">
         <FaLinkedin />
       </NavExternalLink>
-      <NavItem to="/contact" label="Contact" selected={selected === 3} id={3} setSelected={setSelected} close={close}>
+      <NavItem to="/contact" label="Contact" selected={selected === 4} id={4} setSelected={setSelected} close={close}>
         <IoIosMail />
       </NavItem>
     </nav>

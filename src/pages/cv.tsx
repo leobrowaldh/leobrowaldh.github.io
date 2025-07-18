@@ -28,7 +28,7 @@ const Cv = ({setSelectedNav}: {setSelectedNav: (id: number) => void}) =>
             <MotionNavLink
               to="/contact"
               end
-              onClick={() => setSelectedNav(3)}
+              onClick={() => setSelectedNav(4)}
               className="mb-2 px-4 py-2"
               title="Contact me for full PDF"
               whileHover={{ scale: 1.05 }}
