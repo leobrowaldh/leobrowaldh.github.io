@@ -24,7 +24,11 @@ const IconSideNav = ({selected, setSelected}: IconSideNavProps) =>
     <>
       {/* Hamburger toggle (mobile only) */}
       <button
-        className="md:hidden absolute top-4 left-0 z-50 text-white bg-slate-800 p-2 rounded"
+        className="md:hidden absolute top-4 left-0 z-50 p-2 rounded 
+             text-slate-800 dark:text-white 
+             bg-white dark:bg-slate-800 
+             border border-slate-300 dark:border-transparent 
+             shadow"
         onClick={() => setIsOpen(!isOpen)}
         style={{ marginLeft: '0.5rem' }} // optional: matches sidebar padding
       >
@@ -34,7 +38,7 @@ const IconSideNav = ({selected, setSelected}: IconSideNavProps) =>
       {/* Sidebar (mobile: toggle, desktop: always visible) */}
       <div
         className={`
-          bg-cyan-900 text-slate-100 p-4 pt-18
+          bg-gray-400 dark:bg-sky-950 text-slate-100 p-4 pt-18
           ${isOpen ? "flex" : "hidden"} 
           md:flex
           fixed md:static top-0 left-0 flex-col z-40

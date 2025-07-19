@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black text-lime-500 px-4 py-8">
+    <div className="rounded-xl flex items-center justify-center min-h-screen bg-black text-lime-500 px-4 py-8">
       <div className="flex flex-col items-center gap-8">
         <div className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
           <div className="max-w-md animate-fade-in">

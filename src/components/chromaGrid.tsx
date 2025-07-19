@@ -151,7 +151,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full h-full flex flex-wrap justify-center items-start gap-3 ${className}`}
+      className={`pt-10 relative w-full h-full flex flex-wrap justify-center items-start gap-3 ${className}`}
       style={
         {
           "--r": `${radius}px`,
@@ -208,6 +208,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       <div
         className="absolute inset-0 pointer-events-none z-30"
         style={{
+          borderRadius: 15,
           backdropFilter: "grayscale(1) brightness(0.78)",
           WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
           background: "rgba(0,0,0,0.001)",
