@@ -1,5 +1,12 @@
 import ChromaGrid, { type ChromaItem } from "../components/chromaGrid";
 
+// ARTICLES TO ADD:
+// 1. azure functions as web apis
+// 2. allways encrypted with secure enclaves
+// 3. managed identity and roles in SQL
+// 4. Multi purpose generic sql crud repositories
+// 5. Vector embeddings
+
 const Articles = () => 
 {
 
@@ -9,8 +16,8 @@ const Articles = () =>
               title: "Web Push Notifications",
               subtitle: "A deep dive into this technology and how to use it",
               handle: " ",
-              borderColor: "#10B981",
-              gradient: "linear-gradient(210deg,#10B981,#000)",
+              borderColor: "black",
+              gradient: "linear-gradient(210deg,rgb(83, 145, 194),#000)",
               url: "https://www.linkedin.com/pulse/implementing-web-push-notifications-your-website-browaldh-carracedo-3rmkf/?trackingId=vxrtknugTw2SJ2y85uN9Eg%3D%3D",
             },
             {
@@ -18,8 +25,8 @@ const Articles = () =>
               title: "Video Conference Applications",
               subtitle: "How to build a video conference application with WebRTC",
               handle: " ",
-              borderColor: "#4F46E5",
-              gradient: "linear-gradient(145deg,#4F46E5,#000)",
+              borderColor: "black",
+              gradient: "linear-gradient(145deg,rgb(51, 181, 85),#000)",
               url: "https://www.linkedin.com/pulse/how-build-webrtc-video-conference-application-dying-process-browaldh-2eymf/?trackingId=vxrtknugTw2SJ2y85uN9Eg%3D%3D",
             },
             // {

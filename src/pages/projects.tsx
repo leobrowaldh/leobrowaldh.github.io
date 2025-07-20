@@ -1,5 +1,11 @@
 import ChromaGrid, { type ChromaItem } from "../components/chromaGrid";
 
+//PROJECTS TO ADD:
+// 1. Spiritual guide
+// 2. couple fair trade
+// 3. csl gaming? mayb...
+// 4. Secret Manager
+
 export default function Projects() {
 
     const projects: ChromaItem[] = [
@@ -8,8 +14,8 @@ export default function Projects() {
           title: "Film Recommendations",
           subtitle: "Ai assisted film recommendations app",
           handle: " ",
-          borderColor: "#10B981",
-          gradient: "linear-gradient(210deg,#10B981,#000)",
+          borderColor: "black",
+          gradient: "linear-gradient(210deg,rgb(83, 145, 194),#000)",
           url: "https://kind-smoke-050d18e03.6.azurestaticapps.net/",
         },
         {
@@ -17,8 +23,8 @@ export default function Projects() {
           title: "Chat Master",
           subtitle: "Chat app to test web push notifications",
           handle: " ",
-          borderColor: "#4F46E5",
-          gradient: "linear-gradient(145deg,#4F46E5,#000)",
+          borderColor: "black",
+          gradient: "linear-gradient(145deg,rgb(51, 181, 85),#000)",
           url: "https://chatmaster-b4d6g3fha7ggdzb8.northeurope-01.azurewebsites.net/",
         },
         {
@@ -26,8 +32,8 @@ export default function Projects() {
           title: "Event Organizer",
           subtitle: "Organize events with your friends and family",
           handle: " ",
-          borderColor: "#F59E0B",
-          gradient: "linear-gradient(165deg,#F59E0B,#000)",
+          borderColor: "black",
+          gradient: "linear-gradient(165deg,rgb(83, 145, 194),#000)",
           url: "https://event-organizer-h0def3csceaxhqf0.swedencentral-01.azurewebsites.net",
         },
         // {

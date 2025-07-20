@@ -38,7 +38,7 @@ const IconSideNav = ({selected, setSelected}: IconSideNavProps) =>
       {/* Sidebar (mobile: toggle, desktop: always visible) */}
       <div
         className={`
-          bg-gray-400 dark:bg-sky-950 text-slate-100 p-4 pt-18
+          bg-neutral-50 dark:bg-neutral-900 text-slate-100 p-4 pt-18
           ${isOpen ? "flex" : "hidden"} 
           md:flex
           fixed md:static top-0 left-0 flex-col z-40
