@@ -186,7 +186,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
               src={c.image}
               alt={c.title}
               loading="lazy"
-              className="w-[250px] h-[250px] object-cover rounded-[10px]"
+              className="w-[250px] h-[250px] object-contain rounded-[10px]"
             />
           </div>
           <footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1">

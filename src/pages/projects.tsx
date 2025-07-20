@@ -24,7 +24,7 @@ export default function Projects() {
           subtitle: "Chat app to test web push notifications",
           handle: " ",
           borderColor: "black",
-          gradient: "linear-gradient(145deg,rgb(51, 181, 85),#000)",
+          gradient: "linear-gradient(145deg,rgb(184, 242, 241),#000)",
           url: "https://chatmaster-b4d6g3fha7ggdzb8.northeurope-01.azurewebsites.net/",
         },
         {

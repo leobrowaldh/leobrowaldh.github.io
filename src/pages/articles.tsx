@@ -12,7 +12,7 @@ const Articles = () =>
 
     const articles: ChromaItem[] = [
             {
-              image: "/images/webpushArticle.png",
+              image: "/images/pushNotifications.png",
               title: "Web Push Notifications",
               subtitle: "A deep dive into this technology and how to use it",
               handle: " ",
@@ -21,12 +21,12 @@ const Articles = () =>
               url: "https://www.linkedin.com/pulse/implementing-web-push-notifications-your-website-browaldh-carracedo-3rmkf/?trackingId=vxrtknugTw2SJ2y85uN9Eg%3D%3D",
             },
             {
-              image: "/images/videoConferenceArticle.png",
+              image: "/images/WebRTC-Logo-Vector.svg-.png",
               title: "Video Conference Applications",
               subtitle: "How to build a video conference application with WebRTC",
               handle: " ",
               borderColor: "black",
-              gradient: "linear-gradient(145deg,rgb(51, 181, 85),#000)",
+              gradient: "linear-gradient(145deg,rgb(184, 242, 241),#000)",
               url: "https://www.linkedin.com/pulse/how-build-webrtc-video-conference-application-dying-process-browaldh-2eymf/?trackingId=vxrtknugTw2SJ2y85uN9Eg%3D%3D",
             },
             // {
