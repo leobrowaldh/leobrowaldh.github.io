@@ -10,6 +10,15 @@ export default function Projects() {
 
     const projects: ChromaItem[] = [
         {
+          image: "/images/SpiritualGuide3.png",
+          title: "Spiritual Guide",
+          subtitle: "Vector embedding based Spiritual guide with Entra External Id",
+          handle: " ",
+          borderColor: "black",
+          gradient: "linear-gradient(210deg,rgb(184, 242, 241),#000)",
+          url: "https://zealous-water-0ccf68303.1.azurestaticapps.net/",
+        },
+        {
           image: "/images/FilmRecommendations.png",
           title: "Film Recommendations",
           subtitle: "Ai assisted film recommendations app",
@@ -19,7 +28,7 @@ export default function Projects() {
           url: "https://kind-smoke-050d18e03.6.azurestaticapps.net/",
         },
         {
-          image: "/images/chatmaster-48x48.png",
+          image: "/images/Chatmaster.png",
           title: "Chat Master",
           subtitle: "Chat app to test web push notifications",
           handle: " ",
@@ -28,41 +37,14 @@ export default function Projects() {
           url: "https://chatmaster-b4d6g3fha7ggdzb8.northeurope-01.azurewebsites.net/",
         },
         {
-          image: "/images/eventOrganizier.jpg",
+          image: "/images/EventOrganizer3.png",
           title: "Event Organizer",
           subtitle: "Organize events with your friends and family",
           handle: " ",
           borderColor: "black",
           gradient: "linear-gradient(165deg,rgb(83, 145, 194),#000)",
           url: "https://event-organizer-h0def3csceaxhqf0.swedencentral-01.azurewebsites.net",
-        },
-        // {
-        //   image: "https://i.pravatar.cc/300?img=16",
-        //   title: "Casey Park",
-        //   subtitle: "Data Scientist",
-        //   handle: "@caseypark",
-        //   borderColor: "#EF4444",
-        //   gradient: "linear-gradient(195deg,#EF4444,#000)",
-        //   url: "https://kaggle.com/",
-        // },
-        // {
-        //   image: "https://i.pravatar.cc/300?img=25",
-        //   title: "Sam Kim",
-        //   subtitle: "Mobile Developer",
-        //   handle: "@thesamkim",
-        //   borderColor: "#8B5CF6",
-        //   gradient: "linear-gradient(225deg,#8B5CF6,#000)",
-        //   url: "https://github.com/",
-        // },
-        // {
-        //   image: "https://i.pravatar.cc/300?img=60",
-        //   title: "Tyler Rodriguez",
-        //   subtitle: "Cloud Architect",
-        //   handle: "@tylerrod",
-        //   borderColor: "#06B6D4",
-        //   gradient: "linear-gradient(135deg,#06B6D4,#000)",
-        //   url: "https://aws.amazon.com/",
-        // },
+        }
       ];
 
     return (
