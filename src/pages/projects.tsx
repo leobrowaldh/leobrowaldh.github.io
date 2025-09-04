@@ -34,7 +34,7 @@ export default function Projects() {
           handle: " ",
           borderColor: "black",
           gradient: "linear-gradient(145deg,rgb(184, 242, 241),#000)",
-          url: "https://chatmaster-b4d6g3fha7ggdzb8.northeurope-01.azurewebsites.net/",
+          url: "https://chatmaster-gnb4gth5h6hugwgj.swedencentral-01.azurewebsites.net/",
         },
         {
           image: "/images/EventOrganizer3.png",
